@@ -1,0 +1,1 @@
+This is an R Markdown to visualise insights from the Crash Analysis System (CAS) on social cost of crashes. The CAS data is available here: https://opendata-nzta.opendata.arcgis.com/datasets/crash-analysis-system-cas-data-1/explore?location=-20.304565%2C0.000000%2C2.92
