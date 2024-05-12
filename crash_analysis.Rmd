@@ -1,0 +1,80 @@
+---
+title: "Social Cost of Crashes by Region"
+author: "Tieta Putri"
+date: "10/05/2024"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+source("crash_analysis.R")
+```
+
+## Minor, serious and fatal crash cost by region {.tabset .tabset-fade .tabset-pills}
+
+```{r, echo=FALSE, results="asis"}
+
+for (i in region$region){
+
+  cat("### ", i, "\n")
+  cat("\n")
+  print(plots_crash[[i]])
+  cat("\n")
+  cat("\n")
+}
+cat("\n")
+
+```
+
+
+## Minor, serious and fatal crash percentage cost by region {.tabset .tabset-fade .tabset-pills}
+
+```{r, echo=FALSE, results="asis"}
+
+for (i in region$region){
+
+  cat("### ", i, "\n")
+  cat("\n")
+  print(plots_crash_pct[[i]])
+  cat("\n")
+  cat("\n")
+}
+cat("\n")
+
+```
+
+## Fatal pedestrian crash cost by region {.tabset .tabset-fade .tabset-pills}
+
+```{r, echo=FALSE, results="asis"}
+
+for (i in region$region){
+
+  cat("### ", i, "\n")
+  cat("\n")
+  print(plots[[i]])
+  cat("\n")
+  cat("\n")
+}
+cat("\n")
+
+```
+
+
+## Fatal pedestrian crash cost as a percentage of fatal crash cost by region {.tabset .tabset-fade .tabset-pills}
+
+```{r, echo=FALSE, results="asis"}
+
+for (i in region$region){
+
+  cat("### ", i, "\n")
+  cat("\n")
+  print(plots_pedestrian_fatal[[i]])
+  cat("\n")
+  cat("\n")
+}
+cat("\n")
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
